@@ -1,5 +1,14 @@
 // Write your Character component here
-import App from "../App";
+import styled from "styled-components"
+
+const Styling = styled.div`
+    color: bisque;
+    padding: 2%;
+    background-color: #443e3e;
+    border-width: 10%;
+    border-color: burlywood;
+    border-style: solid;
+    margin: 10px`
 
 function Char(slice0) {
     let slice = slice0
@@ -10,10 +19,9 @@ function Char(slice0) {
     let b = []
     
     slice.slice0.forEach(element => {
-        a = <div>{element.name}</div>
+        a = <Styling class = "name">{element.name}</Styling>
         b.push(a)
         });
-
         return b
 }
 
